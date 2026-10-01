@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagram program="umletino" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLSequenceAllInOne</id>
+    <coordinates><x>20</x><y>20</y><w>1350</w><h>820</h></coordinates>
+    <panel_attributes>title=Check Out Library Book
+obj=Librarian~lib ACTOR
+obj=:Terminal~term
+obj=:LibrarySystem~sys
+obj=:BorrowerAccount~acct
+obj=:BookCopy~copy
+obj=:Loan~loan
+
+lib-&gt;term : 1. scanBook(bookCode)
+lib-&gt;term : 2. scanCard(cardCode)
+lib-&gt;&gt;&gt;term : 3. enterCode('C')
+term-&gt;&gt;&gt;sys : 4. checkout(); on=sys
+sys-&gt;&gt;&gt;acct : 5. validateCard(card)
+acct.&gt;sys : 6. eligible
+sys-&gt;&gt;&gt;term : 7. displayCardStatus(eligible)
+sys-&gt;&gt;&gt;copy : 8. isAvailable(book)
+copy.&gt;sys : 9. available
+sys-&gt;&gt;&gt;term : 10. displayBookStatus(available)
+
+combinedFragment=alt~result
+sys:[eligible and available]
+sys-&gt;&gt;&gt;loan : 11. create(account, copy)
+loan.&gt;sys : 12. loan(dueDate)
+sys-&gt;&gt;&gt;copy : 13. markCheckedOut()
+sys.&gt;term : 14. displayDueDate(date)
+
+..=result
+sys:[otherwise]
+sys.&gt;term : 11. displayError(reason)
+
+--=result
+off=sys</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
+
+
+
+
+
+
+
+
