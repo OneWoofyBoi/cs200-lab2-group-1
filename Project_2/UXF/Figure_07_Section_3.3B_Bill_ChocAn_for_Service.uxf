@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='utf-8'?>
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLSpecialState</id><coordinates><x>485</x><y>70</y><w>30</w><h>30</h></coordinates><panel_attributes>type=initial</panel_attributes><additional_attributes /></element><element><id>UMLState</id><coordinates><x>340</x><y>170</y><w>320</w><h>60</h></coordinates><panel_attributes>Provider initiates billing
+workflow
+fontsize=14</panel_attributes><additional_attributes /></element><element><id>UMLState</id><coordinates><x>340</x><y>270</y><w>320</w><h>60</h></coordinates><panel_attributes>Call: Validate Member Card
+fontsize=14</panel_attributes><additional_attributes /></element><element><id>UMLSpecialState</id><coordinates><x>475</x><y>370</y><w>50</w><h>50</h></coordinates><panel_attributes>type=decision</panel_attributes><additional_attributes /></element><element><id>Text</id><coordinates><x>510</x><y>365</y><w>330</w><h>50</h></coordinates><panel_attributes>Member validated?
+fontsize=14</panel_attributes><additional_attributes /></element><element><id>UMLState</id><coordinates><x>340</x><y>470</y><w>320</w><h>60</h></coordinates><panel_attributes>Enter date of service
+(MM-DD-YYYY)
+fontsize=14</panel_attributes><additional_attributes /></element><element><id>UMLSpecialState</id><coordinates><x>475</x><y>570</y><w>50</w><h>50</h></coordinates><panel_attributes>type=decision</panel_attributes><additional_attributes /></element><element><id>Text</id><coordinates><x>510</x><y>565</y><w>330</w><h>50</h></coordinates><panel_attributes>Valid date and not future?
+fontsize=14</panel_attributes><additional_attributes /></element><element><id>UMLState</id><coordinates><x>340</x><y>670</y><w>320</w><h>60</h></coordinates><panel_attributes>Enter 6-digit service code
+fontsize=14</panel_attributes><additional_attributes /></element><element><id>UMLSpecialState</id><coordinates><x>475</x><y>770</y><w>50</w><h>50</h></coordinates><panel_attributes>type=decision</panel_attributes><additional_attributes /></element><element><id>Text</id><coordinates><x>510</x><y>765</y><w>330</w><h>50</h></coordinates><panel_attributes>Code in Provider Directory?
+fontsize=14</panel_attributes><additional_attributes /></element><element><id>UMLState</id><coordinates><x>340</x><y>870</y><w>320</w><h>60</h></coordinates><panel_attributes>Display service name (up to 20
+characters)
+fontsize=14</panel_attributes><additional_attributes /></element><element><id>UMLSpecialState</id><coordinates><x>475</x><y>970</y><w>50</w><h>50</h></coordinates><panel_attributes>type=decision</panel_attributes><additional_attributes /></element><element><id>Text</id><coordinates><x>510</x><y>965</y><w>330</w><h>50</h></coordinates><panel_attributes>Service matches treatment?
+fontsize=14</panel_attributes><additional_attributes /></element><element><id>UMLSpecialState</id><coordinates><x>475</x><y>1070</y><w>50</w><h>50</h></coordinates><panel_attributes>type=decision</panel_attributes><additional_attributes /></element><element><id>Text</id><coordinates><x>510</x><y>1065</y><w>330</w><h>50</h></coordinates><panel_attributes>Add comments?
+fontsize=14</panel_attributes><additional_attributes /></element><element><id>UMLState</id><coordinates><x>340</x><y>1170</y><w>320</w><h>60</h></coordinates><panel_attributes>Call: Add Optional Comments
+fontsize=14</panel_attributes><additional_attributes /></element><element><id>UMLSpecialState</id><coordinates><x>475</x><y>1270</y><w>50</w><h>50</h></coordinates><panel_attributes>type=decision</panel_attributes><additional_attributes /></element><element><id>UMLState</id><coordinates><x>340</x><y>1370</y><w>320</w><h>60</h></coordinates><panel_attributes>Write service record to disk
+fontsize=14</panel_attributes><additional_attributes /></element><element><id>UMLState</id><coordinates><x>340</x><y>1470</y><w>320</w><h>60</h></coordinates><panel_attributes>Look up standard fee; display
+on terminal
+fontsize=14</panel_attributes><additional_attributes /></element><element><id>UMLState</id><coordinates><x>340</x><y>1570</y><w>320</w><h>60</h></coordinates><panel_attributes>Provider copies details to paper
+verification form
+fontsize=14</panel_attributes><additional_attributes /></element><element><id>UMLSpecialState</id><coordinates><x>475</x><y>1670</y><w>50</w><h>50</h></coordinates><panel_attributes>type=decision</panel_attributes><additional_attributes /></element><element><id>UMLSpecialState</id><coordinates><x>485</x><y>1770</y><w>30</w><h>30</h></coordinates><panel_attributes>type=final</panel_attributes><additional_attributes /></element><element><id>Relation</id><coordinates><x>490</x><y>90</y><w>20</w><h>90</h></coordinates><panel_attributes>lt=-&gt;
+fontsize=14</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>490</x><y>220</y><w>20</w><h>60</h></coordinates><panel_attributes>lt=-&gt;
+fontsize=14</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>Relation</id><coordinates><x>490</x><y>320</y><w>20</w><h>60</h></coordinates><panel_attributes>lt=-&gt;
+fontsize=14</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>Relation</id><coordinates><x>490</x><y>410</y><w>20</w><h>70</h></coordinates><panel_attributes>lt=-&gt;
+[yes]
+fontsize=14</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>UMLState</id><coordinates><x>-10</x><y>470</y><w>320</w><h>60</h></coordinates><panel_attributes>Display billing abort notice
+fontsize=14</panel_attributes><additional_attributes /></element><element><id>Relation</id><coordinates><x>140</x><y>410</y><w>370</w><h>70</h></coordinates><panel_attributes>lt=-&gt;
+[no]
+fontsize=14</panel_attributes><additional_attributes>360;10;360;35;10;35;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>490</x><y>520</y><w>20</w><h>60</h></coordinates><panel_attributes>lt=-&gt;
+fontsize=14</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>Relation</id><coordinates><x>490</x><y>610</y><w>20</w><h>70</h></coordinates><panel_attributes>lt=-&gt;
+[yes]
+fontsize=14</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>UMLState</id><coordinates><x>-10</x><y>670</y><w>320</w><h>60</h></coordinates><panel_attributes>Display Invalid Date
+fontsize=14</panel_attributes><additional_attributes /></element><element><id>Relation</id><coordinates><x>140</x><y>610</y><w>370</w><h>70</h></coordinates><panel_attributes>lt=-&gt;
+[no]
+fontsize=14</panel_attributes><additional_attributes>360;10;360;35;10;35;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>490</x><y>720</y><w>20</w><h>60</h></coordinates><panel_attributes>lt=-&gt;
+fontsize=14</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>Relation</id><coordinates><x>490</x><y>810</y><w>20</w><h>70</h></coordinates><panel_attributes>lt=-&gt;
+[yes]
+fontsize=14</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>UMLState</id><coordinates><x>690</x><y>870</y><w>320</w><h>60</h></coordinates><panel_attributes>Display invalid service code
+fontsize=14</panel_attributes><additional_attributes /></element><element><id>Relation</id><coordinates><x>490</x><y>810</y><w>370</w><h>70</h></coordinates><panel_attributes>lt=-&gt;
+[no]
+fontsize=14</panel_attributes><additional_attributes>10;10;10;35;360;35;360;60</additional_attributes></element><element><id>Relation</id><coordinates><x>490</x><y>920</y><w>20</w><h>60</h></coordinates><panel_attributes>lt=-&gt;
+fontsize=14</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>Relation</id><coordinates><x>490</x><y>1010</y><w>20</w><h>70</h></coordinates><panel_attributes>lt=-&gt;
+[yes]
+fontsize=14</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>UMLState</id><coordinates><x>690</x><y>1070</y><w>320</w><h>60</h></coordinates><panel_attributes>Cancel mismatched code
+fontsize=14</panel_attributes><additional_attributes /></element><element><id>Relation</id><coordinates><x>490</x><y>1010</y><w>370</w><h>70</h></coordinates><panel_attributes>lt=-&gt;
+[no]
+fontsize=14</panel_attributes><additional_attributes>10;10;10;35;360;35;360;60</additional_attributes></element><element><id>Relation</id><coordinates><x>-90</x><y>490</y><w>440</w><h>220</h></coordinates><panel_attributes>lt=-&gt;
+fontsize=14</panel_attributes><additional_attributes>80;210;10;210;10;50;415;50;415;10;430;10</additional_attributes></element><element><id>UMLSpecialState</id><coordinates><x>825</x><y>1270</y><w>50</w><h>50</h></coordinates><panel_attributes>type=decision</panel_attributes><additional_attributes /></element><element><id>Relation</id><coordinates><x>865</x><y>890</y><w>195</w><h>415</h></coordinates><panel_attributes>lt=-&gt;
+fontsize=14</panel_attributes><additional_attributes>145;10;185;10;185;405;10;405</additional_attributes></element><element><id>Relation</id><coordinates><x>840</x><y>1120</y><w>20</w><h>160</h></coordinates><panel_attributes>lt=-&gt;
+fontsize=14</panel_attributes><additional_attributes>10;10;10;150</additional_attributes></element><element><id>Relation</id><coordinates><x>650</x><y>690</y><w>490</w><h>660</h></coordinates><panel_attributes>lt=-&gt;
+fontsize=14</panel_attributes><additional_attributes>200;630;200;650;480;650;480;50;10;50;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>490</x><y>1110</y><w>20</w><h>70</h></coordinates><panel_attributes>lt=-&gt;
+[yes]
+fontsize=14</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>490</x><y>1085</y><w>200</w><h>195</h></coordinates><panel_attributes>lt=-&gt;
+[no]
+fontsize=14</panel_attributes><additional_attributes>35;10;190;10;190;177;10;177;10;185</additional_attributes></element><element><id>Relation</id><coordinates><x>490</x><y>1220</y><w>20</w><h>60</h></coordinates><panel_attributes>lt=-&gt;
+fontsize=14</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>Relation</id><coordinates><x>490</x><y>1310</y><w>20</w><h>70</h></coordinates><panel_attributes>lt=-&gt;
+fontsize=14</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>490</x><y>1420</y><w>20</w><h>60</h></coordinates><panel_attributes>lt=-&gt;
+fontsize=14</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>Relation</id><coordinates><x>490</x><y>1520</y><w>20</w><h>60</h></coordinates><panel_attributes>lt=-&gt;
+fontsize=14</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>Relation</id><coordinates><x>490</x><y>1620</y><w>20</w><h>60</h></coordinates><panel_attributes>lt=-&gt;
+fontsize=14</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>Relation</id><coordinates><x>490</x><y>1710</y><w>20</w><h>70</h></coordinates><panel_attributes>lt=-&gt;
+fontsize=14</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>-130</x><y>490</y><w>615</w><h>1215</h></coordinates><panel_attributes>lt=-&gt;
+fontsize=14</panel_attributes><additional_attributes>120;10;10;10;10;1205;605;1205</additional_attributes></element></diagram>

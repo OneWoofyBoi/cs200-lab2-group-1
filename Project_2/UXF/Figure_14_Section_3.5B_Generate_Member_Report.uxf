@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLSpecialState</id><coordinates><x>485</x><y>70</y><w>30</w><h>30</h></coordinates><panel_attributes>type=initial</panel_attributes><additional_attributes /></element><element><id>UMLState</id><coordinates><x>340</x><y>170</y><w>320</w><h>60</h></coordinates><panel_attributes>Identify target member
+fontsize=14</panel_attributes><additional_attributes /></element><element><id>Relation</id><coordinates><x>490</x><y>90</y><w>20</w><h>90</h></coordinates><panel_attributes>lt=-&gt;
+fontsize=14</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>UMLState</id><coordinates><x>340</x><y>270</y><w>320</w><h>60</h></coordinates><panel_attributes>Retrieve name, 9-digit ID and
+address
+fontsize=14</panel_attributes><additional_attributes /></element><element><id>Relation</id><coordinates><x>490</x><y>220</y><w>20</w><h>60</h></coordinates><panel_attributes>lt=-&gt;
+fontsize=14</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>UMLState</id><coordinates><x>340</x><y>370</y><w>320</w><h>60</h></coordinates><panel_attributes>Query weekly member consultations;
+sort by service date
+fontsize=14</panel_attributes><additional_attributes /></element><element><id>Relation</id><coordinates><x>490</x><y>320</y><w>20</w><h>60</h></coordinates><panel_attributes>lt=-&gt;
+fontsize=14</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>UMLSpecialState</id><coordinates><x>475</x><y>470</y><w>50</w><h>50</h></coordinates><panel_attributes>type=decision</panel_attributes><additional_attributes /></element><element><id>Text</id><coordinates><x>510</x><y>465</y><w>330</w><h>50</h></coordinates><panel_attributes>Consultations recorded?
+fontsize=14</panel_attributes><additional_attributes /></element><element><id>Relation</id><coordinates><x>490</x><y>420</y><w>20</w><h>60</h></coordinates><panel_attributes>lt=-&gt;
+fontsize=14</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>UMLState</id><coordinates><x>165</x><y>570</y><w>320</w><h>60</h></coordinates><panel_attributes>Format dates, provider names
+and service names
+fontsize=14</panel_attributes><additional_attributes /></element><element><id>Relation</id><coordinates><x>315</x><y>510</y><w>195</w><h>70</h></coordinates><panel_attributes>lt=-&gt;
+[yes]
+fontsize=14</panel_attributes><additional_attributes>185;10;185;35;10;35;10;60</additional_attributes></element><element><id>UMLState</id><coordinates><x>515</x><y>570</y><w>320</w><h>60</h></coordinates><panel_attributes>Note zero consultations
+fontsize=14</panel_attributes><additional_attributes /></element><element><id>Relation</id><coordinates><x>490</x><y>510</y><w>195</w><h>70</h></coordinates><panel_attributes>lt=-&gt;
+[no]
+fontsize=14</panel_attributes><additional_attributes>10;10;10;35;185;35;185;60</additional_attributes></element><element><id>UMLSpecialState</id><coordinates><x>475</x><y>670</y><w>50</w><h>50</h></coordinates><panel_attributes>type=decision</panel_attributes><additional_attributes /></element><element><id>Relation</id><coordinates><x>315</x><y>620</y><w>195</w><h>60</h></coordinates><panel_attributes>lt=-&gt;
+fontsize=14</panel_attributes><additional_attributes>10;10;10;30;185;30;185;50</additional_attributes></element><element><id>Relation</id><coordinates><x>490</x><y>620</y><w>195</w><h>60</h></coordinates><panel_attributes>lt=-&gt;
+fontsize=14</panel_attributes><additional_attributes>185;10;185;30;10;30;10;50</additional_attributes></element><element><id>UMLState</id><coordinates><x>340</x><y>770</y><w>320</w><h>80</h></coordinates><panel_attributes>Write
+&lt;MemberName&gt;_&lt;MM-DD-YYYY&gt;.txt to
+disk
+fontsize=14</panel_attributes><additional_attributes /></element><element><id>Relation</id><coordinates><x>490</x><y>710</y><w>20</w><h>70</h></coordinates><panel_attributes>lt=-&gt;
+fontsize=14</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>UMLState</id><coordinates><x>340</x><y>870</y><w>320</w><h>60</h></coordinates><panel_attributes>Return to calling process
+fontsize=14</panel_attributes><additional_attributes /></element><element><id>Relation</id><coordinates><x>490</x><y>840</y><w>20</w><h>40</h></coordinates><panel_attributes>lt=-&gt;
+fontsize=14</panel_attributes><additional_attributes>10;10;10;30</additional_attributes></element><element><id>UMLSpecialState</id><coordinates><x>485</x><y>970</y><w>30</w><h>30</h></coordinates><panel_attributes>type=final</panel_attributes><additional_attributes /></element><element><id>Relation</id><coordinates><x>490</x><y>920</y><w>20</w><h>60</h></coordinates><panel_attributes>lt=-&gt;
+fontsize=14</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element></diagram>

@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLSpecialState</id><coordinates><x>485</x><y>20</y><w>30</w><h>30</h></coordinates><panel_attributes>type=initial</panel_attributes><additional_attributes /></element><element><id>UMLState</id><coordinates><x>340</x><y>110</y><w>320</w><h>60</h></coordinates><panel_attributes>Swipe card or enter 9-digit
+member number
+fontsize=14</panel_attributes><additional_attributes /></element><element><id>UMLState</id><coordinates><x>340</x><y>210</y><w>320</w><h>60</h></coordinates><panel_attributes>Submit number to ChocAn
+Data Center
+fontsize=14</panel_attributes><additional_attributes /></element><element><id>UMLState</id><coordinates><x>340</x><y>310</y><w>320</w><h>60</h></coordinates><panel_attributes>Verify number and account
+status in member records
+fontsize=14</panel_attributes><additional_attributes /></element><element><id>UMLSpecialState</id><coordinates><x>475</x><y>410</y><w>50</w><h>50</h></coordinates><panel_attributes>type=decision</panel_attributes><additional_attributes /></element><element><id>Text</id><coordinates><x>500</x><y>385</y><w>300</w><h>30</h></coordinates><panel_attributes>Member number valid?
+fontsize=14</panel_attributes><additional_attributes /></element><element><id>UMLState</id><coordinates><x>10</x><y>530</y><w>300</w><h>60</h></coordinates><panel_attributes>Display "Validated"
+fontsize=14</panel_attributes><additional_attributes /></element><element><id>UMLState</id><coordinates><x>390</x><y>530</y><w>300</w><h>60</h></coordinates><panel_attributes>Display "Account is Suspended"
+fontsize=14</panel_attributes><additional_attributes /></element><element><id>UMLState</id><coordinates><x>770</x><y>530</y><w>300</w><h>60</h></coordinates><panel_attributes>Display "Number is Invalid"
+fontsize=14</panel_attributes><additional_attributes /></element><element><id>UMLState</id><coordinates><x>10</x><y>630</y><w>300</w><h>60</h></coordinates><panel_attributes>Provide Service
+fontsize=14</panel_attributes><additional_attributes /></element><element><id>UMLSpecialState</id><coordinates><x>145</x><y>740</y><w>30</w><h>30</h></coordinates><panel_attributes>type=final</panel_attributes><additional_attributes /></element><element><id>UMLSpecialState</id><coordinates><x>715</x><y>655</y><w>50</w><h>50</h></coordinates><panel_attributes>type=decision</panel_attributes><additional_attributes /></element><element><id>UMLState</id><coordinates><x>625</x><y>750</y><w>230</w><h>60</h></coordinates><panel_attributes>Prompt to retry
+fontsize=14</panel_attributes><additional_attributes /></element><element><id>Relation</id><coordinates><x>490</x><y>40</y><w>20</w><h>80</h></coordinates><panel_attributes>lt=-&gt;
+fontsize=14</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element><element><id>Relation</id><coordinates><x>490</x><y>160</y><w>20</w><h>60</h></coordinates><panel_attributes>lt=-&gt;
+fontsize=14</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>Relation</id><coordinates><x>490</x><y>260</y><w>20</w><h>60</h></coordinates><panel_attributes>lt=-&gt;
+fontsize=14</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>Relation</id><coordinates><x>490</x><y>360</y><w>20</w><h>60</h></coordinates><panel_attributes>lt=-&gt;
+fontsize=14</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>Relation</id><coordinates><x>150</x><y>425</y><w>335</w><h>115</h></coordinates><panel_attributes>lt=-&gt;
+[valid]
+fontsize=14</panel_attributes><additional_attributes>325;10;10;10;10;105</additional_attributes></element><element><id>Relation</id><coordinates><x>490</x><y>450</y><w>20</w><h>90</h></coordinates><panel_attributes>lt=-&gt;
+[suspended]
+fontsize=14</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>515</x><y>425</y><w>415</w><h>115</h></coordinates><panel_attributes>lt=-&gt;
+[invalid]
+fontsize=14</panel_attributes><additional_attributes>10;10;405;10;405;105</additional_attributes></element><element><id>Relation</id><coordinates><x>150</x><y>580</y><w>20</w><h>60</h></coordinates><panel_attributes>lt=-&gt;
+fontsize=14</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>Relation</id><coordinates><x>150</x><y>680</y><w>20</w><h>70</h></coordinates><panel_attributes>lt=-&gt;
+fontsize=14</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>530</x><y>580</y><w>195</w><h>110</h></coordinates><panel_attributes>lt=-&gt;
+fontsize=14</panel_attributes><additional_attributes>10;10;10;100;185;100</additional_attributes></element><element><id>Relation</id><coordinates><x>755</x><y>580</y><w>175</w><h>110</h></coordinates><panel_attributes>lt=-&gt;
+fontsize=14</panel_attributes><additional_attributes>165;10;165;100;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>730</x><y>695</y><w>20</w><h>65</h></coordinates><panel_attributes>lt=-&gt;
+fontsize=14</panel_attributes><additional_attributes>10;10;10;55</additional_attributes></element><element><id>Relation</id><coordinates><x>650</x><y>130</y><w>500</w><h>660</h></coordinates><panel_attributes>lt=-&gt;
+fontsize=14</panel_attributes><additional_attributes>205;650;490;650;490;10;10;10</additional_attributes></element></diagram>
