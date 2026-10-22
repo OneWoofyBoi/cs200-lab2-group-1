@@ -1,0 +1,64 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>30</x><y>70</y><w>210</w><h>130</h></coordinates><panel_attributes>Client
+--
+-clientId: String
+-name: String
+-shippingAddress: String
+--
++placeOrder(): Order
++getOrders(): Order [0..*]</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>420</x><y>70</y><w>260</w><h>160</h></coordinates><panel_attributes>Order
+--
+-orderId: String
+-orderDate: Date
+-status: String
+-items: Map&lt;Figurine, Integer&gt;
+--
++addItem(f: Figurine, qty: Integer): void
++quantityFor(f: Figurine): Integer
++isFulfilled(): Boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>920</x><y>70</y><w>230</w><h>140</h></coordinates><panel_attributes>Figurine
+--
+-sku: String
+-name: String
+-description: String
+--
++getSku(): String
++getName(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>30</x><y>260</y><w>280</w><h>140</h></coordinates><panel_attributes>Warehouse
+--
+-warehouseId: String
+-address: String
+--
++store(c: Case): void
++release(c: Case): void
++quantityOnHand(f: Figurine): Integer</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>420</x><y>330</y><w>290</w><h>170</h></coordinates><panel_attributes>Shipment
+--
+-shipmentId: String
+-shippedOn: Date [0..1]
+-trackingNumber: String
+-status: String
+--
++addCase(c: Case): void
++dispatch(): void
++isDelivered(): Boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>920</x><y>340</y><w>230</w><h>110</h></coordinates><panel_attributes>Case
+--
+-caseId: String
+-quantity: Integer
+--
++getQuantity(): Integer
++getFigurine(): Figurine</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>230</x><y>120</y><w>210</w><h>50</h></coordinates><panel_attributes>lt=&lt;-&gt;
+m1=1
+m2=0..*
+places</panel_attributes><additional_attributes>10;20;190;20</additional_attributes></element><element><id>Relation</id><coordinates><x>670</x><y>120</y><w>270</w><h>50</h></coordinates><panel_attributes>lt=-&gt;
+m1=0..*
+m2=1..*
+requests</panel_attributes><additional_attributes>10;20;250;20</additional_attributes></element><element><id>Relation</id><coordinates><x>1060</x><y>200</y><w>80</w><h>160</h></coordinates><panel_attributes>lt=-&gt;
+m1=0..*
+m2=1
+contains</panel_attributes><additional_attributes>10;140;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>600</x><y>220</y><w>60</w><h>130</h></coordinates><panel_attributes>lt=-&gt;
+m1=0..*
+m2=1
+fulfills</panel_attributes><additional_attributes>10;110;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>700</x><y>400</y><w>240</w><h>50</h></coordinates><panel_attributes>lt=-&gt;
+m1=0..1
+m2=1..*
+carries</panel_attributes><additional_attributes>10;20;220;20</additional_attributes></element><element><id>Relation</id><coordinates><x>150</x><y>390</y><w>950</w><h>220</h></coordinates><panel_attributes>lt=-&gt;
+m1=0..1
+m2=0..*
+stores</panel_attributes><additional_attributes>10;10;10;200;910;200;910;60</additional_attributes></element></diagram>
