@@ -1,0 +1,3117 @@
+<?xml version='1.0' encoding='utf-8'?>
+<diagram program="umletino" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>40</x>
+      <y>40</y>
+      <w>680</w>
+      <h>840</h>
+    </coordinates>
+    <panel_attributes />
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>171</x>
+      <y>29</y>
+      <w>418</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>ProviderTerminal
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>40</x>
+      <y>100</y>
+      <w>680</w>
+      <h>10</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>0;0;680;0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>45</x>
+      <y>83</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>- providerId:String
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>45</x>
+      <y>133</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>- pendingComments:String
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>40</x>
+      <y>203</y>
+      <w>680</w>
+      <h>10</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>0;0;680;0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>45</x>
+      <y>210</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ displayMainMenu():void
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>45</x>
+      <y>260</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ verify(id:String):boolean
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>45</x>
+      <y>310</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ validateCard(id:String)
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>45</x>
+      <y>360</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>:String
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>45</x>
+      <y>410</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ bill(record:ServiceRecord)
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>45</x>
+      <y>460</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>:boolean
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>45</x>
+      <y>510</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ addComments
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>45</x>
+      <y>560</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>(text:String):boolean
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>45</x>
+      <y>610</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ requestDirectory()
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>45</x>
+      <y>660</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>:boolean
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>45</x>
+      <y>710</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ display(text:String):void
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>45</x>
+      <y>760</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ confirmService
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>45</x>
+      <y>810</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>(name:String):boolean
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>880</x>
+      <y>40</y>
+      <w>680</w>
+      <h>640</h>
+    </coordinates>
+    <panel_attributes />
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1010</x>
+      <y>29</y>
+      <w>420</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>OperatorConsole
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>880</x>
+      <y>100</y>
+      <w>680</w>
+      <h>10</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>0;0;680;0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>885</x>
+      <y>83</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>- loginId:String
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>880</x>
+      <y>153</y>
+      <w>680</w>
+      <h>10</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>0;0;680;0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>885</x>
+      <y>160</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ displayMainMenu():void
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>885</x>
+      <y>210</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ login(id:String,
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>885</x>
+      <y>260</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>password:String):boolean
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>885</x>
+      <y>310</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ manageMembers
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>885</x>
+      <y>360</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>(action:String,
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>885</x>
+      <y>410</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>member:Member):boolean
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>885</x>
+      <y>460</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ manageProviders
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>885</x>
+      <y>510</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>(action:String,
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>885</x>
+      <y>560</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>provider:Provider):boolean
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>885</x>
+      <y>610</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ display(text:String):void
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1720</x>
+      <y>40</y>
+      <w>680</w>
+      <h>540</h>
+    </coordinates>
+    <panel_attributes />
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1846</x>
+      <y>29</y>
+      <w>427</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>ManagerTerminal
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1720</x>
+      <y>100</y>
+      <w>680</w>
+      <h>10</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>0;0;680;0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1725</x>
+      <y>83</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>- managerId:String
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1720</x>
+      <y>153</y>
+      <w>680</w>
+      <h>10</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>0;0;680;0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1725</x>
+      <y>160</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ displayMainMenu():void
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1725</x>
+      <y>210</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ login(id:String):boolean
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1725</x>
+      <y>260</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ memberReport(id:String)
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1725</x>
+      <y>310</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>:boolean
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1725</x>
+      <y>360</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ providerReport(id:String)
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1725</x>
+      <y>410</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>:boolean
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1725</x>
+      <y>460</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ summaryReport():boolean
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1725</x>
+      <y>510</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ display(text:String):void
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>40</x>
+      <y>1050</y>
+      <w>680</w>
+      <h>590</h>
+    </coordinates>
+    <panel_attributes />
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>187</x>
+      <y>1039</y>
+      <w>386</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>ProviderControl
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>40</x>
+      <y>1110</y>
+      <w>680</w>
+      <h>10</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>0;0;680;0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>45</x>
+      <y>1093</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>- providerId:String
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>40</x>
+      <y>1163</y>
+      <w>680</w>
+      <h>10</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>0;0;680;0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>45</x>
+      <y>1170</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ verify(id:String):boolean
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>45</x>
+      <y>1220</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ validateCard(id:String)
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>45</x>
+      <y>1270</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>:String
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>45</x>
+      <y>1320</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ bill(record:ServiceRecord)
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>45</x>
+      <y>1370</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>:boolean
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>45</x>
+      <y>1420</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ addComments
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>45</x>
+      <y>1470</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>(text:String):boolean
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>45</x>
+      <y>1520</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ requestDirectory()
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>45</x>
+      <y>1570</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>:boolean
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>880</x>
+      <y>850</y>
+      <w>680</w>
+      <h>790</h>
+    </coordinates>
+    <panel_attributes />
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1026</x>
+      <y>839</y>
+      <w>388</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>RecordsControl
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>880</x>
+      <y>910</y>
+      <w>680</w>
+      <h>10</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>0;0;680;0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>885</x>
+      <y>893</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>- authenticatedStaff:Person
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>880</x>
+      <y>963</y>
+      <w>680</w>
+      <h>10</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>0;0;680;0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>885</x>
+      <y>970</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ verifyOperator(id:String,
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>885</x>
+      <y>1020</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>password:String):boolean
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>885</x>
+      <y>1070</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ verifyManager(id:String)
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>885</x>
+      <y>1120</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>:boolean
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>885</x>
+      <y>1170</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ manageMembers
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>885</x>
+      <y>1220</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>(action:String,
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>885</x>
+      <y>1270</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>member:Member):boolean
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>885</x>
+      <y>1320</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ manageProviders
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>885</x>
+      <y>1370</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>(action:String,
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>885</x>
+      <y>1420</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>provider:Provider):boolean
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>885</x>
+      <y>1470</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ syncAccounts
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>885</x>
+      <y>1520</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>(updates:List&lt;Member&gt;)
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>885</x>
+      <y>1570</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>:boolean
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1720</x>
+      <y>750</y>
+      <w>680</w>
+      <h>590</h>
+    </coordinates>
+    <panel_attributes />
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1835</x>
+      <y>739</y>
+      <w>450</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>AccountingControl
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1720</x>
+      <y>810</y>
+      <w>680</w>
+      <h>10</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>0;0;680;0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1725</x>
+      <y>793</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>- weekStart:Date
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1725</x>
+      <y>843</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>- weekEnd:Date
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1720</x>
+      <y>913</y>
+      <w>680</w>
+      <h>10</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>0;0;680;0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1725</x>
+      <y>920</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ weeklyAccounting()
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1725</x>
+      <y>970</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>:boolean
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1725</x>
+      <y>1020</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ memberReport(id:String)
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1725</x>
+      <y>1070</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>:boolean
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1725</x>
+      <y>1120</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ providerReport(id:String)
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1725</x>
+      <y>1170</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>:boolean
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1725</x>
+      <y>1220</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ summaryReport():boolean
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1725</x>
+      <y>1270</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ eftData():boolean
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>880</x>
+      <y>1820</y>
+      <w>680</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes />
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1039</x>
+      <y>1809</y>
+      <w>361</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>AcmeInterface
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>880</x>
+      <y>1880</y>
+      <w>680</w>
+      <h>10</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>0;0;680;0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>880</x>
+      <y>1883</y>
+      <w>680</w>
+      <h>10</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>0;0;680;0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>885</x>
+      <y>1890</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ syncAccounts
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>885</x>
+      <y>1940</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>(updates:List&lt;Member&gt;)
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>885</x>
+      <y>1990</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>:boolean
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1720</x>
+      <y>1450</y>
+      <w>680</w>
+      <h>290</h>
+    </coordinates>
+    <panel_attributes />
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1884</x>
+      <y>1439</y>
+      <w>352</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>TimerDaemon
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1720</x>
+      <y>1510</y>
+      <w>680</w>
+      <h>10</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>0;0;680;0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1725</x>
+      <y>1493</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>- weeklyTime:Date
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1720</x>
+      <y>1563</y>
+      <w>680</w>
+      <h>10</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>0;0;680;0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1725</x>
+      <y>1570</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ weeklyAccounting()
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1725</x>
+      <y>1620</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>:boolean
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1725</x>
+      <y>1670</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ eftData():boolean
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>880</x>
+      <y>2720</y>
+      <w>680</w>
+      <h>360</h>
+    </coordinates>
+    <panel_attributes />
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1124</x>
+      <y>2709</y>
+      <w>192</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Person
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>880</x>
+      <y>2780</y>
+      <w>680</w>
+      <h>10</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>0;0;680;0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>885</x>
+      <y>2763</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ name:String
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>885</x>
+      <y>2813</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ number:String
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>885</x>
+      <y>2863</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ streetAddress:String
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>885</x>
+      <y>2913</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ city:String
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>885</x>
+      <y>2963</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ state:String
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>885</x>
+      <y>3013</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ zipCode:String
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>645</x>
+      <y>3170</y>
+      <w>500</w>
+      <h>340</h>
+    </coordinates>
+    <panel_attributes />
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>787</x>
+      <y>3159</y>
+      <w>215</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Member
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>645</x>
+      <y>3230</y>
+      <w>500</w>
+      <h>10</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>0;0;500;0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>650</x>
+      <y>3213</y>
+      <w>490</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>- status:String
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>645</x>
+      <y>3283</y>
+      <w>500</w>
+      <h>10</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>0;0;500;0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>650</x>
+      <y>3290</y>
+      <w>490</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ isValid():boolean
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>650</x>
+      <y>3340</y>
+      <w>490</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ getStatus():String
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>650</x>
+      <y>3390</y>
+      <w>490</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ setStatus
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>650</x>
+      <y>3440</y>
+      <w>490</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>(status:String):void
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1275</x>
+      <y>3170</y>
+      <w>500</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes />
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1415</x>
+      <y>3159</y>
+      <w>220</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Provider
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1275</x>
+      <y>3230</y>
+      <w>500</w>
+      <h>10</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>0;0;500;0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1280</x>
+      <y>3213</y>
+      <w>490</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ totalFeeOwed:
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1280</x>
+      <y>3263</y>
+      <w>490</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>double
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1280</x>
+      <y>3313</y>
+      <w>490</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ consultationCount:
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1280</x>
+      <y>3363</y>
+      <w>490</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>int
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>40</x>
+      <y>3170</y>
+      <w>500</w>
+      <h>390</h>
+    </coordinates>
+    <panel_attributes />
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>174</x>
+      <y>3159</y>
+      <w>232</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Operator
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>40</x>
+      <y>3230</y>
+      <w>500</w>
+      <h>10</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>0;0;500;0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>45</x>
+      <y>3213</y>
+      <w>490</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ loginId:String
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>45</x>
+      <y>3263</y>
+      <w>490</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>- passwordHash:
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>45</x>
+      <y>3313</y>
+      <w>490</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>String
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>40</x>
+      <y>3383</y>
+      <w>500</w>
+      <h>10</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>0;0;500;0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>45</x>
+      <y>3390</y>
+      <w>490</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ authenticate
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>45</x>
+      <y>3440</y>
+      <w>490</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>(password:String)
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>45</x>
+      <y>3490</y>
+      <w>490</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>:boolean
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1880</x>
+      <y>3170</y>
+      <w>500</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes />
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>2015</x>
+      <y>3159</y>
+      <w>230</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Manager
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1880</x>
+      <y>3230</y>
+      <w>500</w>
+      <h>10</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>0;0;500;0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1885</x>
+      <y>3213</y>
+      <w>490</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ loginId:String
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1880</x>
+      <y>3283</y>
+      <w>500</w>
+      <h>10</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>0;0;500;0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1885</x>
+      <y>3290</y>
+      <w>490</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ verifyAccess
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1885</x>
+      <y>3340</y>
+      <w>490</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>(id:String):boolean
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>40</x>
+      <y>1840</y>
+      <w>680</w>
+      <h>290</h>
+    </coordinates>
+    <panel_attributes />
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>166</x>
+      <y>1829</y>
+      <w>427</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>ProviderDirectory
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>40</x>
+      <y>1900</y>
+      <w>680</w>
+      <h>10</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>0;0;680;0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>45</x>
+      <y>1883</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>- fileName:String
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>40</x>
+      <y>1953</y>
+      <w>680</w>
+      <h>10</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>0;0;680;0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>45</x>
+      <y>1960</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ findOffering(code:String)
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>45</x>
+      <y>2010</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>:ServiceOffering
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>45</x>
+      <y>2060</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ export():boolean
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>40</x>
+      <y>2300</y>
+      <w>680</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes />
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>188</x>
+      <y>2289</y>
+      <w>384</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>ServiceOffering
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>40</x>
+      <y>2360</y>
+      <w>680</w>
+      <h>10</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>0;0;680;0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>45</x>
+      <y>2343</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ serviceCode:String
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>45</x>
+      <y>2393</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ serviceName:String
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>45</x>
+      <y>2443</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ fee:double
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>880</x>
+      <y>2140</y>
+      <w>680</w>
+      <h>490</h>
+    </coordinates>
+    <panel_attributes />
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1036</x>
+      <y>2129</y>
+      <w>367</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>ServiceRecord
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>880</x>
+      <y>2200</y>
+      <w>680</w>
+      <h>10</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>0;0;680;0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>885</x>
+      <y>2183</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ recordedDateTime:Date
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>885</x>
+      <y>2233</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ serviceDate:Date
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>885</x>
+      <y>2283</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ providerNumber:String
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>885</x>
+      <y>2333</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ memberNumber:String
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>885</x>
+      <y>2383</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ serviceCode:String
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>885</x>
+      <y>2433</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ feeToPay:double
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>885</x>
+      <y>2483</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ comments:String
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>880</x>
+      <y>2553</y>
+      <w>680</w>
+      <h>10</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>0;0;680;0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>885</x>
+      <y>2560</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ save():boolean
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1720</x>
+      <y>1840</y>
+      <w>680</w>
+      <h>340</h>
+    </coordinates>
+    <panel_attributes />
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1967</x>
+      <y>1829</y>
+      <w>185</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Report
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1720</x>
+      <y>1900</y>
+      <w>680</w>
+      <h>10</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>0;0;680;0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1725</x>
+      <y>1883</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ kind:String
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1725</x>
+      <y>1933</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ generationDate:Date
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1725</x>
+      <y>1983</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ fileName:String
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1725</x>
+      <y>2033</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ content:String
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1720</x>
+      <y>2103</y>
+      <w>680</w>
+      <h>10</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>0;0;680;0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1725</x>
+      <y>2110</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ save():boolean
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1720</x>
+      <y>2330</y>
+      <w>680</w>
+      <h>340</h>
+    </coordinates>
+    <panel_attributes />
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1913</x>
+      <y>2319</y>
+      <w>294</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>EFTRecord
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1720</x>
+      <y>2390</y>
+      <w>680</w>
+      <h>10</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>0;0;680;0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1725</x>
+      <y>2373</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ providerName:String
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1725</x>
+      <y>2423</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ providerNumber:String
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1725</x>
+      <y>2473</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ transferAmount:double
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1720</x>
+      <y>2543</y>
+      <w>680</w>
+      <h>10</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>0;0;680;0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1725</x>
+      <y>2550</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+ appendTo(file:String)
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1725</x>
+      <y>2600</y>
+      <w>670</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>:boolean
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>60</x>
+      <y>885</y>
+      <w>289</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>terminal [1]
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>395</x>
+      <y>975</y>
+      <w>319</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>controller [1]
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>110</x>
+      <y>970</y>
+      <w>214</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>handles
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>372</x>
+      <y>872</y>
+      <w>16</w>
+      <h>186</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>8.0;8.0;8.0;178.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>880</x>
+      <y>685</y>
+      <w>336</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>console [0..*]
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1235</x>
+      <y>775</y>
+      <w>319</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>controller [1]
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>950</x>
+      <y>770</y>
+      <w>214</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>handles
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1212</x>
+      <y>672</y>
+      <w>16</w>
+      <h>186</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>8.0;8.0;8.0;178.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1710</x>
+      <y>585</y>
+      <w>340</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>terminal [0..*]
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>2075</x>
+      <y>675</y>
+      <w>319</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>controller [1]
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1790</x>
+      <y>670</y>
+      <w>233</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>requests
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2052</x>
+      <y>572</y>
+      <w>16</w>
+      <h>186</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>8.0;8.0;8.0;178.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>890</x>
+      <y>1650</y>
+      <w>334</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>session [0..*]
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1180</x>
+      <y>2645</y>
+      <w>267</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>staff [0..1]
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>890</x>
+      <y>1710</y>
+      <w>342</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>authenticates
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>832</x>
+      <y>1542</y>
+      <w>176</w>
+      <h>1186</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>48.0;8.0;8.0;8.0;8.0;1118.0;168.0;1118.0;168.0;1178.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>60</x>
+      <y>2135</y>
+      <w>306</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>directory [1]
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>390</x>
+      <y>2225</y>
+      <w>357</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>offerings [1..*]
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>110</x>
+      <y>2220</y>
+      <w>227</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>contains
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>372</x>
+      <y>2154</y>
+      <w>16</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>8.0;8.0;8.0;146.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>505</x>
+      <y>2810</y>
+      <w>282</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>records for
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>375</x>
+      <y>2880</y>
+      <w>349</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>services [0..*]
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>495</x>
+      <y>2950</y>
+      <w>293</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>member [1]
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>787</x>
+      <y>2622</y>
+      <w>151</w>
+      <h>556</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>143.0;8.0;143.0;78.0;8.0;78.0;8.0;548.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1665</x>
+      <y>2820</y>
+      <w>223</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>billed by
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1665</x>
+      <y>2890</y>
+      <w>349</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>services [0..*]
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1665</x>
+      <y>2960</y>
+      <w>293</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>provider [1]
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1482</x>
+      <y>2622</y>
+      <w>171</w>
+      <h>556</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>8.0;8.0;8.0;78.0;163.0;78.0;163.0;548.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>40</x>
+      <y>2575</y>
+      <w>280</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>offering [1]
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>350</x>
+      <y>2580</y>
+      <w>331</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>records [0..*]
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>490</x>
+      <y>2650</y>
+      <w>239</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>identifies
+fontsize=49</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>52</x>
+      <y>2502</y>
+      <w>836</w>
+      <h>106</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>828.0;98.0;758.0;98.0;758.0;58.0;8.0;58.0;8.0;8.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1362</x>
+      <y>1632</y>
+      <w>16</w>
+      <h>196</h>
+    </coordinates>
+    <panel_attributes>lt=.
+lw=2</panel_attributes>
+    <additional_attributes>8.0;188.0;8.0;8.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2042</x>
+      <y>1332</y>
+      <w>16</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>lt=.
+lw=2</panel_attributes>
+    <additional_attributes>8.0;118.0;8.0;8.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>362</x>
+      <y>1632</y>
+      <w>16</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>lt=.
+lw=2</panel_attributes>
+    <additional_attributes>8.0;8.0;8.0;208.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>712</x>
+      <y>1342</y>
+      <w>176</w>
+      <h>916</h>
+    </coordinates>
+    <panel_attributes>lt=.
+lw=2</panel_attributes>
+    <additional_attributes>8.0;8.0;68.0;8.0;68.0;908.0;168.0;908.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1552</x>
+      <y>1142</y>
+      <w>176</w>
+      <h>1116</h>
+    </coordinates>
+    <panel_attributes>lt=.
+lw=2</panel_attributes>
+    <additional_attributes>168.0;8.0;128.0;8.0;128.0;1108.0;8.0;1108.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2392</x>
+      <y>1192</y>
+      <w>76</w>
+      <h>716</h>
+    </coordinates>
+    <panel_attributes>lt=.
+lw=2</panel_attributes>
+    <additional_attributes>8.0;8.0;68.0;8.0;68.0;708.0;8.0;708.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2392</x>
+      <y>1092</y>
+      <w>146</w>
+      <h>1316</h>
+    </coordinates>
+    <panel_attributes>lt=.
+lw=2</panel_attributes>
+    <additional_attributes>8.0;8.0;138.0;8.0;138.0;1308.0;8.0;1308.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>712</x>
+      <y>1042</y>
+      <w>1016</w>
+      <h>1066</h>
+    </coordinates>
+    <panel_attributes>lt=.
+lw=2</panel_attributes>
+    <additional_attributes>1008.0;8.0;908.0;8.0;908.0;1058.0;8.0;1058.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1552</x>
+      <y>572</y>
+      <w>176</w>
+      <h>356</h>
+    </coordinates>
+    <panel_attributes>lt=.
+lw=2</panel_attributes>
+    <additional_attributes>168.0;8.0;108.0;8.0;108.0;348.0;8.0;348.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>887</x>
+      <y>3082</y>
+      <w>235</w>
+      <h>97</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>8.0;88.0;226.717;7.655</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1318</x>
+      <y>3083</y>
+      <w>216</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>207.0;87.0;7.997;7.399</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>282</x>
+      <y>3076</y>
+      <w>679</w>
+      <h>103</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>8.0;94.0;670.235;7.621</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1480</x>
+      <y>3076</y>
+      <w>659</w>
+      <h>103</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>650.0;94.0;7.751;7.728</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>358</x>
+      <y>1014</y>
+      <w>44</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=-
+lw=3</panel_attributes>
+    <additional_attributes>36.0;8.0;22.0;36.0;8.0;8.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>358</x>
+      <y>872</y>
+      <w>44</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=-
+lw=3</panel_attributes>
+    <additional_attributes>8.0;36.0;22.0;8.0;36.0;36.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1198</x>
+      <y>814</y>
+      <w>44</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=-
+lw=3</panel_attributes>
+    <additional_attributes>36.0;8.0;22.0;36.0;8.0;8.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2038</x>
+      <y>714</y>
+      <w>44</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=-
+lw=3</panel_attributes>
+    <additional_attributes>36.0;8.0;22.0;36.0;8.0;8.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>978</x>
+      <y>2684</y>
+      <w>44</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=-
+lw=3</panel_attributes>
+    <additional_attributes>36.0;8.0;22.0;36.0;8.0;8.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>362</x>
+      <y>2125</y>
+      <w>36</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>customelement=
+drawLine(18.0,5.0,18.0,5.0) fg=black lw=2
+drawLine(17.188,6.0,18.812,6.0) fg=black lw=2
+drawLine(16.375,7.0,19.625,7.0) fg=black lw=2
+drawLine(15.562,8.0,20.438,8.0) fg=black lw=2
+drawLine(14.75,9.0,21.25,9.0) fg=black lw=2
+drawLine(13.938,10.0,22.062,10.0) fg=black lw=2
+drawLine(13.125,11.0,22.875,11.0) fg=black lw=2
+drawLine(12.312,12.0,23.688,12.0) fg=black lw=2
+drawLine(11.5,13.0,24.5,13.0) fg=black lw=2
+drawLine(10.688,14.0,25.312,14.0) fg=black lw=2
+drawLine(9.875,15.0,26.125,15.0) fg=black lw=2
+drawLine(9.062,16.0,26.938,16.0) fg=black lw=2
+drawLine(8.25,17.0,27.75,17.0) fg=black lw=2
+drawLine(7.438,18.0,28.562,18.0) fg=black lw=2
+drawLine(6.625,19.0,29.375,19.0) fg=black lw=2
+drawLine(5.812,20.0,30.188,20.0) fg=black lw=2
+drawLine(5.0,21.0,31.0,21.0) fg=black lw=2
+drawLine(5.812,22.0,30.188,22.0) fg=black lw=2
+drawLine(6.625,23.0,29.375,23.0) fg=black lw=2
+drawLine(7.438,24.0,28.562,24.0) fg=black lw=2
+drawLine(8.25,25.0,27.75,25.0) fg=black lw=2
+drawLine(9.062,26.0,26.938,26.0) fg=black lw=2
+drawLine(9.875,27.0,26.125,27.0) fg=black lw=2
+drawLine(10.688,28.0,25.312,28.0) fg=black lw=2
+drawLine(11.5,29.0,24.5,29.0) fg=black lw=2
+drawLine(12.312,30.0,23.688,30.0) fg=black lw=2
+drawLine(13.125,31.0,22.875,31.0) fg=black lw=2
+drawLine(13.938,32.0,22.062,32.0) fg=black lw=2
+drawLine(14.75,33.0,21.25,33.0) fg=black lw=2
+drawLine(15.562,34.0,20.438,34.0) fg=black lw=2
+drawLine(16.375,35.0,19.625,35.0) fg=black lw=2
+drawLine(17.188,36.0,18.812,36.0) fg=black lw=2
+drawLine(18.0,37.0,18.0,37.0) fg=black lw=2</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>358</x>
+      <y>2264</y>
+      <w>44</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=-
+lw=3</panel_attributes>
+    <additional_attributes>36.0;8.0;22.0;36.0;8.0;8.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>773</x>
+      <y>3134</y>
+      <w>44</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=-
+lw=3</panel_attributes>
+    <additional_attributes>36.0;8.0;22.0;36.0;8.0;8.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1623</x>
+      <y>3134</y>
+      <w>44</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=-
+lw=3</panel_attributes>
+    <additional_attributes>36.0;8.0;22.0;36.0;8.0;8.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>38</x>
+      <y>2502</y>
+      <w>44</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=-
+lw=3</panel_attributes>
+    <additional_attributes>8.0;36.0;22.0;8.0;36.0;36.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1348</x>
+      <y>1632</y>
+      <w>44</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=-
+lw=3</panel_attributes>
+    <additional_attributes>8.0;36.0;22.0;8.0;36.0;36.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2028</x>
+      <y>1332</y>
+      <w>44</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=-
+lw=3</panel_attributes>
+    <additional_attributes>8.0;36.0;22.0;8.0;36.0;36.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>348</x>
+      <y>1804</y>
+      <w>44</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=-
+lw=3</panel_attributes>
+    <additional_attributes>36.0;8.0;22.0;36.0;8.0;8.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>844</x>
+      <y>2228</y>
+      <w>44</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=-
+lw=3</panel_attributes>
+    <additional_attributes>8.0;8.0;36.0;22.0;8.0;36.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1552</x>
+      <y>2228</y>
+      <w>44</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=-
+lw=3</panel_attributes>
+    <additional_attributes>36.0;36.0;8.0;22.0;36.0;8.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2392</x>
+      <y>1878</y>
+      <w>44</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=-
+lw=3</panel_attributes>
+    <additional_attributes>36.0;36.0;8.0;22.0;36.0;8.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2392</x>
+      <y>2378</y>
+      <w>44</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=-
+lw=3</panel_attributes>
+    <additional_attributes>36.0;36.0;8.0;22.0;36.0;8.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>712</x>
+      <y>2078</y>
+      <w>44</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=-
+lw=3</panel_attributes>
+    <additional_attributes>36.0;36.0;8.0;22.0;36.0;8.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1552</x>
+      <y>898</y>
+      <w>44</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=-
+lw=3</panel_attributes>
+    <additional_attributes>36.0;36.0;8.0;22.0;36.0;8.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1101</x>
+      <y>3069</y>
+      <w>48</w>
+      <h>43</h>
+    </coordinates>
+    <panel_attributes>lt=-
+lw=3</panel_attributes>
+    <additional_attributes>39.0;11.0;7.89;7.514;17.545;33.796;39.0;11.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1292</x>
+      <y>3070</y>
+      <w>48</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=-
+lw=3</panel_attributes>
+    <additional_attributes>8.0;10.0;28.798;33.398;39.197;7.4;8.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>943</x>
+      <y>3062</y>
+      <w>46</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=-
+lw=3</panel_attributes>
+    <additional_attributes>37.0;18.0;7.424;7.739;11.046;35.504;37.0;18.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1452</x>
+      <y>3062</y>
+      <w>46</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=-
+lw=3</panel_attributes>
+    <additional_attributes>8.0;18.0;33.887;35.603;37.615;7.852;8.0;18.0</additional_attributes>
+  </element>
+</diagram>
