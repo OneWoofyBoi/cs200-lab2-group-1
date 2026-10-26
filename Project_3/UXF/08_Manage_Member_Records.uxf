@@ -1,0 +1,361 @@
+<?xml version='1.0' encoding='utf8'?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>10</x>
+      <y>10</y>
+      <w>770</w>
+      <h>666</h>
+    </coordinates>
+    <panel_attributes>sd Manage Member Records
+fontsize=16</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>24</x>
+      <y>280</y>
+      <w>742</w>
+      <h>292</h>
+    </coordinates>
+    <panel_attributes>alt
+fontsize=16</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>24</x>
+      <y>432</y>
+      <w>742</w>
+      <h>10</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>0;0;742;0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>45</x>
+      <y>45</y>
+      <w>60</w>
+      <h>115</h>
+    </coordinates>
+    <panel_attributes>Operator
+fontsize=16</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>75</x>
+      <y>165</y>
+      <w>10</w>
+      <h>491</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>0;0;0;491</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>308</x>
+      <y>50</y>
+      <w>144</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>_ui:_
+_OperatorConsole_
+fontsize=16</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>613</x>
+      <y>50</y>
+      <w>144</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>_control:_
+_RecordsControl_
+fontsize=16</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>75</x>
+      <y>183</y>
+      <w>315</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>305.0;0;0.0;0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>96</x>
+      <y>156</y>
+      <w>261</w>
+      <h>26</h>
+    </coordinates>
+    <panel_attributes>manageMembers(action, member)
+fontsize=16
+halign=center</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>380</x>
+      <y>223</y>
+      <w>315</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>305.0;0;0.0;0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>401</x>
+      <y>196</y>
+      <w>261</w>
+      <h>26</h>
+    </coordinates>
+    <panel_attributes>manageMembers(action, member)
+fontsize=16
+halign=center</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>380</x>
+      <y>263</y>
+      <w>315</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>0.0;0;305.0;0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>432</x>
+      <y>236</y>
+      <w>200</w>
+      <h>26</h>
+    </coordinates>
+    <panel_attributes>success
+fontsize=16
+halign=center</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>60</x>
+      <y>306</y>
+      <w>655</w>
+      <h>26</h>
+    </coordinates>
+    <panel_attributes>[success]
+fontsize=16
+halign=center</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>380</x>
+      <y>363</y>
+      <w>35</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>0;16;28;16;28;0;0;0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>416</x>
+      <y>336</y>
+      <w>319</w>
+      <h>26</h>
+    </coordinates>
+    <panel_attributes>display("Operation completed")
+fontsize=16
+halign=left</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>380</x>
+      <y>409</y>
+      <w>35</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>0;16;28;16;28;0;0;0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>416</x>
+      <y>382</y>
+      <w>319</w>
+      <h>26</h>
+    </coordinates>
+    <panel_attributes>completed
+fontsize=16
+halign=left</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>60</x>
+      <y>446</y>
+      <w>655</w>
+      <h>26</h>
+    </coordinates>
+    <panel_attributes>[else]
+fontsize=16
+halign=center</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>380</x>
+      <y>503</y>
+      <w>35</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>0;16;28;16;28;0;0;0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>416</x>
+      <y>476</y>
+      <w>319</w>
+      <h>26</h>
+    </coordinates>
+    <panel_attributes>display("Operation failed")
+fontsize=16
+halign=left</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>380</x>
+      <y>549</y>
+      <w>35</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>0;16;28;16;28;0;0;0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>416</x>
+      <y>522</y>
+      <w>319</w>
+      <h>26</h>
+    </coordinates>
+    <panel_attributes>completed
+fontsize=16
+halign=left</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>75</x>
+      <y>609</y>
+      <w>315</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>0.0;0;305.0;0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>127</x>
+      <y>582</y>
+      <w>200</w>
+      <h>26</h>
+    </coordinates>
+    <panel_attributes>success
+fontsize=16
+halign=center</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>380</x>
+      <y>106</y>
+      <w>10</w>
+      <h>204</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>0;0;0;204.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>380</x>
+      <y>333</y>
+      <w>10</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>0;0;0;117</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>380</x>
+      <y>473</y>
+      <w>10</w>
+      <h>183</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>0;0;0;183.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>685</x>
+      <y>106</y>
+      <w>10</w>
+      <h>234</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>0;0;0;234.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>685</x>
+      <y>363</y>
+      <w>10</w>
+      <h>293</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>0;0;0;293.0</additional_attributes>
+  </element>
+</diagram>
