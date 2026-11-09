@@ -2,7 +2,6 @@ package chocan.data;
 import chocan.entity.*;
 import java.util.*;
 import java.time.*;
-/** @author Michael Ifeanyichukwu */
 public class Database implements java.io.Serializable {
     private static final long serialVersionUID=1L;
     private final Map<String,Member> members=new LinkedHashMap<>();
@@ -68,9 +67,6 @@ public class Database implements java.io.Serializable {
     public boolean addManager(Manager x) {
         return x!=null&&managers.putIfAbsent(x.getNumber(),x)==null;
     }
-    // Capture identity at acceptance; deletion or later edits cannot rewrite
-    // billed history.
-    // Accepted records retain identity snapshots for historical reports.
     public boolean addServiceRecord(ServiceRecord r) {
         if(r==null||records.contains(r))return false;
         Member m=findMember(r.getMemberNumber());
@@ -87,7 +83,6 @@ public class Database implements java.io.Serializable {
     public Provider providerForRecord(ServiceRecord r) {
         return recordProviders.get(r);
     }
-    // Receipt timestamps determine the reporting period, not service dates.
     public List<ServiceRecord> recordsForPeriod(Date start,Date end) {
         if(start==null||end==null||!end.after(start))throw new IllegalArgumentException("Period requires start before exclusive end");
         return records.stream().filter(x->!x.getRecordedDateTime().before(start)&&x.getRecordedDateTime().before(end)).toList();
