@@ -1,12 +1,9 @@
 package chocan.data;
 import java.nio.file.*;
 import java.io.*;
-/** Local optional restart snapshots. Never load untrusted snapshot files.
- * @author Michael Ifeanyichukwu */
 public final class DataPersistenceManager {
     private DataPersistenceManager() {
     }
-    // A temporary snapshot is replaced only after serialization succeeds.
     public static void save(Database database,Path file)throws IOException {
         if(database==null)throw new IllegalArgumentException("Database required");
         Path absolute=file.toAbsolutePath();
