@@ -7,21 +7,22 @@ import chocan.ui.*;
 import java.nio.file.*;
 
 /** Executable composition root for the local in-memory reference application.
- * @author Landon Liles */
+ * @author Landon Liles & Dawson Sconyers */
 public final class Main {
     private Main() { }
     // One shared store connects the role menus to their controllers.
     public static void main(String[] args) {
+        boolean gui = args.length > 0 && args[0].equals("--gui");
         Path outputDirectory=Path.of("output"), stateFile=null;
         try {
-            int index=0;
-            if(args.length>0 && !args[0].equals("--state")) outputDirectory=Path.of(args[index++]);
+            int index = gui ? 1 : 0;
+            if(index < args.length && !args[index].equals("--state")) outputDirectory=Path.of(args[index++]);
             if(index<args.length) {
                 if(!args[index++].equals("--state") || index>=args.length) throw new IllegalArgumentException("Missing --state file");
                 stateFile=Path.of(args[index++]);
             }
             if(index!=args.length) throw new IllegalArgumentException("Unexpected arguments");
-        } catch(IllegalArgumentException e) { System.err.println("Usage: chocan.Main [output-directory] [--state snapshot-file]"); return; }
+        } catch(IllegalArgumentException e) { System.err.println("Usage: chocan.Main [--gui] [output-directory] [--state snapshot-file]"); return; }
         Database database;
         try { database=stateFile!=null && Files.exists(stateFile)?DataPersistenceManager.load(stateFile):Database.demo(); }
         catch(java.io.IOException e) { System.err.println("Cannot load snapshot; it has not been changed: "+e.getMessage()); return; }
@@ -30,6 +31,13 @@ public final class Main {
         AccountingControl accounting=new AccountingControl(database);
         accounting.setOutputDirectory(outputDirectory);
         provider.setOutputDirectory(outputDirectory);
+        if (gui) {
+            Path snapshot = stateFile;
+            ChocAnWindow.open(database, provider, records, accounting, () -> {
+                if (snapshot != null) DataPersistenceManager.save(database, snapshot);
+            });
+            return;
+        }
         ConsoleInput in=new ConsoleInput(System.in,System.out);
         in.print("ChocAn Project 4 reference application\n"+(stateFile==null?"Demo data is reset each launch.":"Optional snapshot: "+stateFile)+" Reports and directory files are local outputs.");
         try {

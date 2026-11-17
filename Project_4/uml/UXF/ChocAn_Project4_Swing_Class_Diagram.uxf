@@ -1,0 +1,407 @@
+<?xml version='1.0' encoding='utf-8'?>
+<diagram program="umletino" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1040</x>
+      <y>20</y>
+      <w>1240</w>
+      <h>1780</h>
+    </coordinates>
+    <panel_attributes>*ChocAnWindow*
+chocan.ui
+--
+_- TEXT: ColorUIResource_
+_- MUTED: ColorUIResource_
+_- BACKGROUND: ColorUIResource_
+_- SURFACE: ColorUIResource_
+_- CONTROL: ColorUIResource_
+_- BORDER: ColorUIResource_
+_- SELECTED: ColorUIResource_
+_- ACCENT: ColorUIResource_
+_- ERROR: Color_
+_- SERVICE_DATE: DateTimeFormatter_
+- database: Database
+- provider: ProviderControl
+- records: RecordsControl
+- accounting: AccountingControl
+- manager: ManagerTerminal
+- actions: JPanel
+- workspace: JPanel
+- section: JLabel
+- status: JLabel
+- loginFeedback: JLabel
+- accountLabel: JLabel
+- pages: CardLayout
+- content: JPanel
+- results: JTextArea
+- role: JComboBox&lt;String&gt;
+- login: JTextField
+- password: JPasswordField
+- passwordLabel: JLabel
+--
+_+ open(Database, ProviderControl, RecordsControl,_
+_    AccountingControl, SaveOnClose): void_
+_~ installTheme(): void_
+~ ChocAnWindow(Database, ProviderControl, RecordsControl, AccountingControl)
+~ close(SaveOnClose, Runnable): void
+- loginPage(): JPanel
+- showLogin(): void
+- updatePasswordVisibility(): void
+- signIn(): void
+- validateMember(): void
+- serviceForm(): void
+- directory(): void
+- recordList(boolean): void
+- recordForm(boolean, Person): void
+- deleteForm(boolean, Person): void
+- acmeUpdate(): void
+- reportForm(boolean): void
+- periodForm(): void
+- report(boolean): void
+- action(String, Runnable): void
+- button(String, Runnable): JButton
+- showForm(Form): void
+- write(String): void
+- message(String, boolean): void
+_- field(String, String): JTextField_
+_- value(JTextField): String_
+fontsize=27
+lw=2</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>240</y>
+      <w>720</w>
+      <h>116</h>
+    </coordinates>
+    <panel_attributes>*Database*
+(reference)
+fontsize=27
+lw=2</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>480</y>
+      <w>720</w>
+      <h>116</h>
+    </coordinates>
+    <panel_attributes>*ProviderControl*
+(reference)
+fontsize=27
+lw=2</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>720</y>
+      <w>720</w>
+      <h>116</h>
+    </coordinates>
+    <panel_attributes>*RecordsControl*
+(reference)
+fontsize=27
+lw=2</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>960</y>
+      <w>720</w>
+      <h>116</h>
+    </coordinates>
+    <panel_attributes>*AccountingControl*
+(reference)
+fontsize=27
+lw=2</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>1200</y>
+      <w>720</w>
+      <h>116</h>
+    </coordinates>
+    <panel_attributes>*ManagerTerminal*
+(reference)
+fontsize=27
+lw=2</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2700</x>
+      <y>40</y>
+      <w>720</w>
+      <h>116</h>
+    </coordinates>
+    <panel_attributes>*Main*
+(reference)
+fontsize=27
+lw=2</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2700</x>
+      <y>680</y>
+      <w>720</w>
+      <h>116</h>
+    </coordinates>
+    <panel_attributes>*AcmeInterface*
+(reference)
+fontsize=27
+lw=2</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2700</x>
+      <y>920</y>
+      <w>720</w>
+      <h>116</h>
+    </coordinates>
+    <panel_attributes>*TimerDaemon*
+(reference)
+fontsize=27
+lw=2</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2700</x>
+      <y>240</y>
+      <w>720</w>
+      <h>188</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+*ChocAnWindow.SaveOnClose*
+public static nested type
+--
++ save(): void throws IOException
+fontsize=27
+lw=2</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2700</x>
+      <y>1170</y>
+      <w>720</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>*JPanel*
+javax.swing
+fontsize=27
+lw=2</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2700</x>
+      <y>1420</y>
+      <w>720</w>
+      <h>382</h>
+    </coordinates>
+    <panel_attributes>*ChocAnWindow.Form*
+private inner class
+--
+- fields: JPanel
+- buttons: JPanel
+- row: int
+--
+~ Form(String)
+~ text(String, String): JTextField
+~ row(String, JComponent): void
+~ row(JLabel, JComponent): void
+~ footer(String, Runnable): void
+fontsize=27
+lw=2</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>720</x>
+      <y>255</y>
+      <w>340</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+lw=2
+fontsize=20
+m1=0..1
+r1=database</panel_attributes>
+    <additional_attributes>20;45;320;45</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>720</x>
+      <y>495</y>
+      <w>340</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+lw=2
+fontsize=20
+m1=1
+r1=provider</panel_attributes>
+    <additional_attributes>20;45;320;45</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>720</x>
+      <y>735</y>
+      <w>340</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+lw=2
+fontsize=20
+m1=1
+r1=records</panel_attributes>
+    <additional_attributes>20;45;320;45</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>720</x>
+      <y>975</y>
+      <w>340</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+lw=2
+fontsize=20
+m1=0..1
+r1=accounting</panel_attributes>
+    <additional_attributes>20;45;320;45</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>720</x>
+      <y>1215</y>
+      <w>340</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+lw=2
+fontsize=20
+m2=1
+r2=manager</panel_attributes>
+    <additional_attributes>320;45;20;45</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2260</x>
+      <y>55</y>
+      <w>460</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+lw=2
+fontsize=20</panel_attributes>
+    <additional_attributes>20;45;440;45</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2260</x>
+      <y>285</y>
+      <w>460</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+lw=2
+fontsize=20</panel_attributes>
+    <additional_attributes>440;45;20;45</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2260</x>
+      <y>695</y>
+      <w>460</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+lw=2
+fontsize=20</panel_attributes>
+    <additional_attributes>440;45;20;45</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2260</x>
+      <y>935</y>
+      <w>460</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+lw=2
+fontsize=20</panel_attributes>
+    <additional_attributes>440;45;20;45</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2260</x>
+      <y>1185</y>
+      <w>460</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+lw=2
+fontsize=20</panel_attributes>
+    <additional_attributes>440;45;20;45</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>3060</x>
+      <y>1255</y>
+      <w>40</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+lw=2
+fontsize=20</panel_attributes>
+    <additional_attributes>20;45;20;165</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2260</x>
+      <y>1555</y>
+      <w>460</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+lw=2
+fontsize=20</panel_attributes>
+    <additional_attributes>440;45;20;45</additional_attributes>
+  </element>
+</diagram>

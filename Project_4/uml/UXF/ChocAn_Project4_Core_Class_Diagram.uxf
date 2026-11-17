@@ -1,0 +1,1141 @@
+<?xml version='1.0' encoding='utf-8'?>
+<diagram program="umletino" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>80</x>
+      <y>80</y>
+      <w>660</w>
+      <h>400</h>
+    </coordinates>
+    <panel_attributes>*ConsoleInput*
+chocan.ui
+--
+- reader: BufferedReader
+- output: PrintStream
+--
++ ConsoleInput(InputStream, PrintStream)
++ print(String): void
++ read(String): String
++ date(String): LocalDate
++ serviceDate(): LocalDate
++ yes(String): boolean
+fontsize=27
+lw=2</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>80</x>
+      <y>780</y>
+      <w>660</w>
+      <h>480</h>
+    </coordinates>
+    <panel_attributes>*ProviderTerminal*
+chocan.ui
+--
+- control: ProviderControl
+- providerId: String
+--
++ ProviderTerminal(ProviderControl)
++ verify(String): boolean
++ validateCard(String): String
++ bill(ServiceRecord): boolean
++ addComments(String): boolean
++ requestDirectory(): boolean
++ display(String): void
++ displayMainMenu(): void
++ run(ConsoleInput, Database): void
+fontsize=27
+lw=2</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>80</x>
+      <y>1400</y>
+      <w>660</w>
+      <h>760</h>
+    </coordinates>
+    <panel_attributes>*ProviderControl*
+chocan.control
+--
+- database: Database
+- providerId: String
+- pendingComments: String
+- lastError: String
+- outputDirectory: Path
+--
++ ProviderControl(Database)
++ verify(String): boolean
++ logout(): void
++ getProviderId(): String
++ getLastError(): String
++ setOutputDirectory(Path): void
++ validateCard(String): String
++ addComments(String): boolean
++ findOffering(String): ServiceOffering
++ bill(ServiceRecord): boolean
++ recordService(String, String, Date, String,
+    boolean): boolean
+- fail(String): boolean
++ directoryText(): String
++ requestDirectory(): boolean
+fontsize=27
+lw=2</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>80</x>
+      <y>2280</y>
+      <w>660</w>
+      <h>840</h>
+    </coordinates>
+    <panel_attributes>*ServiceRecord*
+chocan.entity
+--
+_- serialVersionUID: long_
+- recordedDateTime: Date
+- serviceDate: Date
+- providerNumber: String
+- memberNumber: String
+- serviceCode: String
+- comments: String
+- feeToPay: BigDecimal
+--
++ ServiceRecord(Date, String, String, String,
+    double, String)
++ ServiceRecord(Date, Date, String, String,
+    String, BigDecimal, String)
++ getRecordedDateTime(): Date
++ getServiceDate(): Date
++ getProviderNumber(): String
++ getMemberNumber(): String
++ getServiceCode(): String
++ getFeeToPay(): double
++ getFeeAmount(): BigDecimal
++ getComments(): String
++ getFormattedRecordedTime(): String
++ getFormattedServiceDate(): String
++ save(Path): boolean
+fontsize=27
+lw=2</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>80</x>
+      <y>3300</y>
+      <w>660</w>
+      <h>460</h>
+    </coordinates>
+    <panel_attributes>*ServiceOffering*
+chocan.entity
+--
+_- serialVersionUID: long_
+- serviceCode: String
+- serviceName: String
+- fee: BigDecimal
+--
++ ServiceOffering(String, String, double)
++ ServiceOffering(String, String, BigDecimal)
++ getServiceCode(): String
++ getServiceName(): String
++ getFee(): double
++ getFeeAmount(): BigDecimal
+fontsize=27
+lw=2</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>940</x>
+      <y>120</y>
+      <w>660</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>*Main*
+chocan
+--
+- Main()
+_+ main(String[]): void_
+fontsize=27
+lw=2</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>940</x>
+      <y>780</y>
+      <w>660</w>
+      <h>420</h>
+    </coordinates>
+    <panel_attributes>*OperatorConsole*
+chocan.ui
+--
+- control: RecordsControl
+--
++ OperatorConsole(RecordsControl)
++ login(String, String): boolean
++ manageMembers(String, Member): boolean
++ manageProviders(String, Provider): boolean
++ display(String): void
++ displayMainMenu(): void
++ run(ConsoleInput, Database): void
+- readMember(ConsoleInput, String): Member
+fontsize=27
+lw=2</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>940</x>
+      <y>1280</y>
+      <w>660</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>*AcmeInterface*
+chocan.ui
+--
+- control: RecordsControl
+--
++ AcmeInterface(Database)
++ AcmeInterface(RecordsControl)
++ syncAccounts(List&lt;Member&gt;): boolean
+fontsize=27
+lw=2</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>940</x>
+      <y>1640</y>
+      <w>660</w>
+      <h>460</h>
+    </coordinates>
+    <panel_attributes>*RecordsControl*
+chocan.control
+--
+- database: Database
+- authenticatedStaff: Person
+--
++ RecordsControl(Database)
++ verifyOperator(String, String): boolean
++ verifyManager(String): boolean
++ logout(): void
++ getAuthenticatedStaff(): Person
++ manageMembers(String, Member): boolean
++ manageProviders(String, Provider): boolean
++ syncAccounts(List&lt;Member&gt;): boolean
+fontsize=27
+lw=2</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>940</x>
+      <y>2300</y>
+      <w>660</w>
+      <h>1300</h>
+    </coordinates>
+    <panel_attributes>*Database*
+chocan.data
+--
+_- serialVersionUID: long_
+- members: Map&lt;String, Member&gt;
+- providers: Map&lt;String, Provider&gt;
+- operators: Map&lt;String, Operator&gt;
+- managers: Map&lt;String, Manager&gt;
+- recordMembers: Map&lt;ServiceRecord,
+    Member&gt;
+- recordProviders: Map&lt;ServiceRecord,
+    Provider&gt;
+- records: List&lt;ServiceRecord&gt;
+- directory: ProviderDirectory
+--
++ Database()
++ getMembers(): List&lt;Member&gt;
++ getProviders(): List&lt;Provider&gt;
++ getOperators(): List&lt;Operator&gt;
++ getManagers(): List&lt;Manager&gt;
++ getServiceRecords(): List&lt;ServiceRecord&gt;
++ getDirectory(): ProviderDirectory
++ findMember(String): Member
++ findProvider(String): Provider
++ findOperator(String): Operator
++ findManager(String): Manager
++ addMember(Member): boolean
++ editMember(Member): boolean
++ deleteMember(String): boolean
++ addProvider(Provider): boolean
++ editProvider(Provider): boolean
++ deleteProvider(String): boolean
++ addOperator(Operator): boolean
++ addManager(Manager): boolean
++ addServiceRecord(ServiceRecord): boolean
++ memberForRecord(ServiceRecord): Member
++ providerForRecord(ServiceRecord): Provider
++ recordsForPeriod(Date,
+    Date): List&lt;ServiceRecord&gt;
++ recordsForPeriod(LocalDate,
+    LocalDate): List&lt;ServiceRecord&gt;
+_+ demo(): Database_
+fontsize=27
+lw=2</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>940</x>
+      <y>3860</y>
+      <w>660</w>
+      <h>520</h>
+    </coordinates>
+    <panel_attributes>*ProviderDirectory*
+chocan.entity
+--
+_- serialVersionUID: long_
+- offerings: List&lt;ServiceOffering&gt;
+- fileName: String
+--
++ ProviderDirectory()
++ ProviderDirectory(String)
++ addOffering(ServiceOffering): void
++ findOffering(String): ServiceOffering
++ getOfferings(): List&lt;ServiceOffering&gt;
++ getFileName(): String
++ displayText(): String
++ export(): boolean
++ export(Path): boolean
+fontsize=27
+lw=2</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1800</x>
+      <y>100</y>
+      <w>660</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>*DataPersistenceManager*
+chocan.data
+--
+- DataPersistenceManager()
+_+ save(Database,_
+_    Path): void throws IOException_
+_+ load(Path): Database throws IOException_
+fontsize=27
+lw=2</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1800</x>
+      <y>780</y>
+      <w>660</w>
+      <h>480</h>
+    </coordinates>
+    <panel_attributes>*ManagerTerminal*
+chocan.ui
+--
+- recordsControl: RecordsControl
+- accountingControl: AccountingControl
+--
++ ManagerTerminal(RecordsControl,
+    AccountingControl)
++ login(String): boolean
++ memberReport(String): boolean
++ providerReport(String): boolean
++ summaryReport(): boolean
++ display(String): void
++ displayMainMenu(): void
++ run(ConsoleInput): void
+fontsize=27
+lw=2</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1800</x>
+      <y>1360</y>
+      <w>660</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>*TimerDaemon*
+chocan.ui
+--
+- control: AccountingControl
+--
++ TimerDaemon(AccountingControl)
++ weeklyAccounting(): boolean
++ eftData(): boolean
+fontsize=27
+lw=2</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1800</x>
+      <y>1760</y>
+      <w>660</w>
+      <h>1000</h>
+    </coordinates>
+    <panel_attributes>*AccountingControl*
+chocan.control
+--
+- database: Database
+- weekStart: LocalDate
+- weekEnd: LocalDate
+- outputDirectory: Path
+- lastError: String
+- lastReport: String
+--
++ AccountingControl(Database)
++ setPeriod(LocalDate, LocalDate): void
++ getWeekStart(): LocalDate
++ getWeekEnd(): LocalDate
++ setOutputDirectory(Path): void
++ getLastError(): String
++ getLastReport(): String
+- records(): List&lt;ServiceRecord&gt;
+- header(String): String
+- person(Person): String
+- safe(String): String
+- save(String, String, String, String): boolean
+- fail(String): boolean
+- providerRecords(String): List&lt;ServiceRecord&gt;
+- total(List&lt;ServiceRecord&gt;): BigDecimal
+- limits(List&lt;ServiceRecord&gt;): boolean
++ memberReport(String): boolean
++ providerReport(String): boolean
+- paidProviders(): SortedSet&lt;String&gt;
++ summaryReport(): boolean
++ eftData(): boolean
++ weeklyAccounting(): boolean
+fontsize=27
+lw=2</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1800</x>
+      <y>2980</y>
+      <w>660</w>
+      <h>540</h>
+    </coordinates>
+    <panel_attributes>*Report*
+chocan.entity
+--
+_- serialVersionUID: long_
+- kind: String
+- fileName: String
+- content: String
+- generationDate: Date
+--
++ Report(String, Date, String, String)
++ Report(String, String, String)
++ getKind(): String
++ getGenerationDate(): Date
++ getFileName(): String
++ getContent(): String
++ save(): boolean
++ save(Path): boolean
+fontsize=27
+lw=2</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1800</x>
+      <y>3640</y>
+      <w>660</w>
+      <h>520</h>
+    </coordinates>
+    <panel_attributes>*EFTRecord*
+chocan.entity
+--
+_- serialVersionUID: long_
+- providerName: String
+- providerNumber: String
+- transferAmount: BigDecimal
+--
++ EFTRecord(String, String, double)
++ EFTRecord(String, String, BigDecimal)
++ getProviderName(): String
++ getProviderNumber(): String
++ getTransferAmount(): double
++ line(): String
++ appendTo(String): boolean
++ appendTo(Path): boolean
+fontsize=27
+lw=2</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2660</x>
+      <y>80</y>
+      <w>660</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>*ConsoleInput.EndOfInput*
+chocan.ui
+--
+_- serialVersionUID: long_
+--
++ EndOfInput()
+fontsize=27
+lw=2</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2660</x>
+      <y>380</y>
+      <w>660</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>*RuntimeException*
+java.lang
+fontsize=27
+lw=2</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2660</x>
+      <y>860</y>
+      <w>660</w>
+      <h>780</h>
+    </coordinates>
+    <panel_attributes>*Person*
+chocan.entity
+--
+_- serialVersionUID: long_
+# name: String
+# number: String
+# streetAddress: String
+# city: String
+# state: String
+# zipCode: String
+--
++ Person(String, String, String, String, String,
+    String)
+_+ text(String, int, String): String_
++ getName(): String
++ setName(String): void
++ getNumber(): String
++ getStreetAddress(): String
++ setStreetAddress(String): void
++ getCity(): String
++ setCity(String): void
++ getState(): String
++ setState(String): void
++ getZipCode(): String
++ setZipCode(String): void
+fontsize=27
+lw=2</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2660</x>
+      <y>1900</y>
+      <w>660</w>
+      <h>400</h>
+    </coordinates>
+    <panel_attributes>*Operator*
+chocan.entity
+--
+_- serialVersionUID: long_
+- loginId: String
+- password: String
+--
++ Operator(String, String, String, String, String,
+    String, String, String)
++ Operator(String, String)
++ getLoginId(): String
++ authenticate(String): boolean
+fontsize=27
+lw=2</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2660</x>
+      <y>2360</y>
+      <w>660</w>
+      <h>360</h>
+    </coordinates>
+    <panel_attributes>*Manager*
+chocan.entity
+--
+_- serialVersionUID: long_
+- loginId: String
+--
++ Manager(String, String, String, String, String,
+    String, String)
++ Manager(String)
++ getLoginId(): String
++ verifyAccess(String): boolean
+fontsize=27
+lw=2</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2660</x>
+      <y>2800</y>
+      <w>660</w>
+      <h>360</h>
+    </coordinates>
+    <panel_attributes>*Member*
+chocan.entity
+--
+_- serialVersionUID: long_
+- status: String
+--
++ Member(String, String, String, String, String,
+    String, String)
++ getStatus(): String
++ setStatus(String): void
++ isValid(): boolean
+fontsize=27
+lw=2</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2660</x>
+      <y>3260</y>
+      <w>660</w>
+      <h>400</h>
+    </coordinates>
+    <panel_attributes>*Provider*
+chocan.entity
+--
+_- serialVersionUID: long_
+- totalFeeOwed: double
+- consultationCount: int
+--
++ Provider(String, String, String, String, String,
+    String)
++ getTotalFeeOwed(): double
++ getConsultationCount(): int
++ setAccountingTotals(int, BigDecimal): void
+fontsize=27
+lw=2</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>3300</x>
+      <y>1560</y>
+      <w>80</w>
+      <h>900</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+lw=2
+fontsize=20</panel_attributes>
+    <additional_attributes>20;20;60;20;60;880;20;880</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>3300</x>
+      <y>1520</y>
+      <w>120</w>
+      <h>1380</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+lw=2
+fontsize=20</panel_attributes>
+    <additional_attributes>20;20;100;20;100;1360;20;1360</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2700</x>
+      <y>1620</y>
+      <w>40</w>
+      <h>300</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+lw=2
+fontsize=20</panel_attributes>
+    <additional_attributes>20;20;20;280</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>3300</x>
+      <y>1480</y>
+      <w>160</w>
+      <h>1880</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+lw=2
+fontsize=20</panel_attributes>
+    <additional_attributes>20;20;140;20;140;1860;20;1860</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2700</x>
+      <y>280</y>
+      <w>40</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+lw=2
+fontsize=20</panel_attributes>
+    <additional_attributes>20;100;20;20</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>120</x>
+      <y>1240</y>
+      <w>40</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+lw=2
+fontsize=20
+m1=0..1</panel_attributes>
+    <additional_attributes>20;160;20;20</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>860</x>
+      <y>1120</y>
+      <w>100</w>
+      <h>620</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+lw=2
+fontsize=20
+m1=0..1</panel_attributes>
+    <additional_attributes>80;600;20;600;20;20;80;20</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>980</x>
+      <y>1540</y>
+      <w>40</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+lw=2
+fontsize=20
+m1=0..1</panel_attributes>
+    <additional_attributes>20;100;20;20</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1580</x>
+      <y>1160</y>
+      <w>240</w>
+      <h>580</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+lw=2
+fontsize=20
+m1=0..1</panel_attributes>
+    <additional_attributes>20;560;120;560;120;20;220;20</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2440</x>
+      <y>1160</y>
+      <w>100</w>
+      <h>700</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+lw=2
+fontsize=20
+m1=0..1</panel_attributes>
+    <additional_attributes>20;680;80;680;80;20;20;20</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1840</x>
+      <y>1620</y>
+      <w>40</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+lw=2
+fontsize=20
+m1=0..1</panel_attributes>
+    <additional_attributes>20;140;20;20</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>640</x>
+      <y>2140</y>
+      <w>380</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+lw=2
+fontsize=20
+m1=1</panel_attributes>
+    <additional_attributes>360;160;360;100;20;100;20;20</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1100</x>
+      <y>2080</y>
+      <w>40</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+lw=2
+fontsize=20
+m1=1</panel_attributes>
+    <additional_attributes>20;220;20;20</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1580</x>
+      <y>2420</y>
+      <w>240</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+lw=2
+fontsize=20
+m1=1</panel_attributes>
+    <additional_attributes>20;40;80;40;80;20;220;20</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1580</x>
+      <y>1280</y>
+      <w>1100</w>
+      <h>500</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+lw=2
+fontsize=20
+m1=0..1</panel_attributes>
+    <additional_attributes>1080;20;160;20;160;480;20;480</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1580</x>
+      <y>2860</y>
+      <w>1100</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+lw=2
+fontsize=20
+m1=0..*</panel_attributes>
+    <additional_attributes>1080;20;20;20</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1580</x>
+      <y>2900</y>
+      <w>1100</w>
+      <h>460</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+lw=2
+fontsize=20
+m1=0..*</panel_attributes>
+    <additional_attributes>1080;440;1020;440;1020;20;20;20</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1580</x>
+      <y>2200</y>
+      <w>1100</w>
+      <h>620</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+lw=2
+fontsize=20
+m1=0..*</panel_attributes>
+    <additional_attributes>1080;20;940;20;940;600;20;600</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1580</x>
+      <y>2420</y>
+      <w>1100</w>
+      <h>440</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+lw=2
+fontsize=20
+m1=0..*</panel_attributes>
+    <additional_attributes>1080;20;980;20;980;420;20;420</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>720</x>
+      <y>2340</y>
+      <w>240</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+lw=2
+fontsize=20
+m1=0..*</panel_attributes>
+    <additional_attributes>20;20;80;20;80;40;220;40</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>720</x>
+      <y>3680</y>
+      <w>300</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+lw=2
+fontsize=20
+m1=0..*</panel_attributes>
+    <additional_attributes>20;20;280;20;280;180</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1020</x>
+      <y>3580</y>
+      <w>40</w>
+      <h>300</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+lw=2
+fontsize=20
+m2=1</panel_attributes>
+    <additional_attributes>20;20;20;280</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>720</x>
+      <y>180</y>
+      <w>240</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+lw=2
+fontsize=20</panel_attributes>
+    <additional_attributes>20;20;220;20</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>640</x>
+      <y>220</y>
+      <w>320</w>
+      <h>580</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+lw=2
+fontsize=20</panel_attributes>
+    <additional_attributes>20;560;20;500;120;500;120;20;300;20</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>980</x>
+      <y>280</y>
+      <w>40</w>
+      <h>520</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+lw=2
+fontsize=20</panel_attributes>
+    <additional_attributes>20;500;20;20</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1500</x>
+      <y>280</y>
+      <w>380</w>
+      <h>520</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+lw=2
+fontsize=20</panel_attributes>
+    <additional_attributes>360;500;360;440;20;440;20;20</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1580</x>
+      <y>160</y>
+      <w>240</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+lw=2
+fontsize=20</panel_attributes>
+    <additional_attributes>220;20;160;20;160;40;20;40</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>760</x>
+      <y>280</y>
+      <w>340</w>
+      <h>2040</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+lw=2
+fontsize=20</panel_attributes>
+    <additional_attributes>320;2020;320;1920;20;1920;20;120;220;120;220;20</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>640</x>
+      <y>20</y>
+      <w>2040</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+lw=2
+fontsize=20</panel_attributes>
+    <additional_attributes>2020;140;1960;140;1960;20;20;20;20;60</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1580</x>
+      <y>240</y>
+      <w>240</w>
+      <h>2200</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+lw=2
+fontsize=20</panel_attributes>
+    <additional_attributes>20;2180;180;2180;180;20;220;20</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2440</x>
+      <y>1120</y>
+      <w>120</w>
+      <h>340</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+lw=2
+fontsize=20</panel_attributes>
+    <additional_attributes>20;320;100;320;100;20;20;20</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>980</x>
+      <y>1180</y>
+      <w>40</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+lw=2
+fontsize=20</panel_attributes>
+    <additional_attributes>20;100;20;20</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>120</x>
+      <y>2140</y>
+      <w>40</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+lw=2
+fontsize=20</panel_attributes>
+    <additional_attributes>20;140;20;20</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>20</x>
+      <y>2060</y>
+      <w>940</w>
+      <h>1900</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+lw=2
+fontsize=20</panel_attributes>
+    <additional_attributes>920;1880;20;1880;20;20;60;20</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1720</x>
+      <y>2660</y>
+      <w>100</w>
+      <h>420</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+lw=2
+fontsize=20</panel_attributes>
+    <additional_attributes>80;400;20;400;20;20;80;20</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2360</x>
+      <y>2660</y>
+      <w>160</w>
+      <h>1000</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+lw=2
+fontsize=20</panel_attributes>
+    <additional_attributes>20;980;20;920;140;920;140;20;100;20</additional_attributes>
+  </element>
+</diagram>
