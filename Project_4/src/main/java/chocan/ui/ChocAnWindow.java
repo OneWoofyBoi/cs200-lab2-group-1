@@ -66,7 +66,7 @@ public final class ChocAnWindow extends JPanel {
     public static void open(Database database, ProviderControl provider, RecordsControl records,
                             AccountingControl accounting, SaveOnClose save) {
         if (GraphicsEnvironment.isHeadless()) {
-            System.err.println("GUI mode requires a desktop display. Run without --gui for terminal mode.");
+            System.err.println("ChocAn requires a desktop display.");
             return;
         }
         SwingUtilities.invokeLater(() -> {

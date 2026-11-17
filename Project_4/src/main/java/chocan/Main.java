@@ -1,62 +1,61 @@
 package chocan;
 
-import chocan.control.*;
+import chocan.control.AccountingControl;
+import chocan.control.ProviderControl;
+import chocan.control.RecordsControl;
 import chocan.data.Database;
 import chocan.data.DataPersistenceManager;
-import chocan.ui.*;
-import java.nio.file.*;
+import chocan.ui.ChocAnWindow;
+import java.awt.GraphicsEnvironment;
+import java.io.IOException;
+import java.nio.channels.FileChannel;
+import java.nio.channels.FileLock;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.StandardOpenOption;
+import javax.swing.JOptionPane;
+import javax.swing.SwingUtilities;
 
-/** Executable composition root for the local in-memory reference application.
+/** Starts the desktop application and manages its saved session.
  * @author Landon Liles & Dawson Sconyers */
 public final class Main {
     private Main() { }
-    // One shared store connects the role menus to their controllers.
+
     public static void main(String[] args) {
-        boolean gui = args.length > 0 && args[0].equals("--gui");
-        Path outputDirectory=Path.of("output"), stateFile=null;
-        try {
-            int index = gui ? 1 : 0;
-            if(index < args.length && !args[index].equals("--state")) outputDirectory=Path.of(args[index++]);
-            if(index<args.length) {
-                if(!args[index++].equals("--state") || index>=args.length) throw new IllegalArgumentException("Missing --state file");
-                stateFile=Path.of(args[index++]);
-            }
-            if(index!=args.length) throw new IllegalArgumentException("Unexpected arguments");
-        } catch(IllegalArgumentException e) { System.err.println("Usage: chocan.Main [--gui] [output-directory] [--state snapshot-file]"); return; }
-        Database database;
-        try { database=stateFile!=null && Files.exists(stateFile)?DataPersistenceManager.load(stateFile):Database.demo(); }
-        catch(java.io.IOException e) { System.err.println("Cannot load snapshot; it has not been changed: "+e.getMessage()); return; }
-        ProviderControl provider=new ProviderControl(database);
-        RecordsControl records=new RecordsControl(database);
-        AccountingControl accounting=new AccountingControl(database);
-        accounting.setOutputDirectory(outputDirectory);
-        provider.setOutputDirectory(outputDirectory);
-        if (gui) {
-            Path snapshot = stateFile;
-            ChocAnWindow.open(database, provider, records, accounting, () -> {
-                if (snapshot != null) DataPersistenceManager.save(database, snapshot);
-            });
+        if (GraphicsEnvironment.isHeadless()) {
+            System.err.println("ChocAn requires a desktop display.");
             return;
         }
-        ConsoleInput in=new ConsoleInput(System.in,System.out);
-        in.print("ChocAn Project 4 reference application\n"+(stateFile==null?"Demo data is reset each launch.":"Optional snapshot: "+stateFile)+" Reports and directory files are local outputs.");
+        Path output = Path.of("output").toAbsolutePath();
+        Path snapshot = output.resolve("chocan-state.bin");
         try {
-            while(true) {
-                in.print("1 Provider | 2 Operator | 3 Manager | 0 Exit");
-                switch(in.read("Role:")) {
-                    case "0": in.print("Goodbye."); return;
-                    case "1": new ProviderTerminal(provider).run(in,database); break;
-                    case "2": new OperatorConsole(records).run(in,database); break;
-                    case "3": new ManagerTerminal(records,accounting).run(in); break;
-                    default: in.print("Choose one of the listed options.");
+            Files.createDirectories(output);
+            FileChannel channel = FileChannel.open(output.resolve("chocan-state.lock"),
+                    StandardOpenOption.CREATE, StandardOpenOption.WRITE);
+            try {
+                FileLock lock = channel.tryLock();
+                if (lock == null) {
+                    throw new IOException("ChocAn is already open in this project folder.");
                 }
+                Database database = Files.notExists(snapshot) ? Database.demo() : DataPersistenceManager.load(snapshot);
+                ProviderControl provider = new ProviderControl(database);
+                RecordsControl records = new RecordsControl(database);
+                AccountingControl accounting = new AccountingControl(database);
+                provider.setOutputDirectory(output);
+                accounting.setOutputDirectory(output);
+                ChocAnWindow.open(database, provider, records, accounting, () -> {
+                    DataPersistenceManager.save(database, snapshot);
+                    channel.close(); // Also releases the session lock.
+                });
+            } catch (IOException | RuntimeException e) {
+                channel.close();
+                throw e;
             }
-        } catch(ConsoleInput.EndOfInput e) { in.print("\nInput ended. Goodbye."); }
-        finally {
-            if(stateFile!=null) {
-                try { DataPersistenceManager.save(database,stateFile); in.print("Snapshot saved: "+stateFile); }
-                catch(java.io.IOException e) { System.err.println("Snapshot could not be saved: "+e.getMessage()); }
-            }
+        } catch (IOException | SecurityException | java.nio.channels.OverlappingFileLockException e) {
+            String reason = e instanceof java.nio.channels.OverlappingFileLockException
+                    ? "ChocAn is already open in this project folder." : e.getMessage();
+            SwingUtilities.invokeLater(() -> JOptionPane.showMessageDialog(null, reason,
+                    "ChocAn could not start", JOptionPane.ERROR_MESSAGE));
         }
     }
 }

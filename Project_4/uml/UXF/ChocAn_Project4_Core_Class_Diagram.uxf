@@ -959,58 +959,6 @@ m2=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>720</x>
-      <y>180</y>
-      <w>240</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;.
-lw=2
-fontsize=20</panel_attributes>
-    <additional_attributes>20;20;220;20</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>640</x>
-      <y>220</y>
-      <w>320</w>
-      <h>580</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;.
-lw=2
-fontsize=20</panel_attributes>
-    <additional_attributes>20;560;20;500;120;500;120;20;300;20</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>980</x>
-      <y>280</y>
-      <w>40</w>
-      <h>520</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;.
-lw=2
-fontsize=20</panel_attributes>
-    <additional_attributes>20;500;20;20</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1500</x>
-      <y>280</y>
-      <w>380</w>
-      <h>520</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;.
-lw=2
-fontsize=20</panel_attributes>
-    <additional_attributes>360;500;360;440;20;440;20;20</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
       <x>1580</x>
       <y>160</y>
       <w>240</w>
