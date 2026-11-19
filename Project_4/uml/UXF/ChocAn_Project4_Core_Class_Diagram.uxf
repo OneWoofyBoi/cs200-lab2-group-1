@@ -37,7 +37,6 @@ lw=2</panel_attributes>
 chocan.ui
 --
 - control: ProviderControl
-- providerId: String
 --
 + ProviderTerminal(ProviderControl)
 + verify(String): boolean

@@ -10,10 +10,9 @@ import java.util.Date;
  * @author Landon Liles */
 public class ProviderTerminal {
     private final ProviderControl control;
-    private String providerId;
     // Provider actions share one controller and its database.
     public ProviderTerminal(ProviderControl control) { this.control = control; }
-    public boolean verify(String id) { providerId=null; if (!control.verify(id)) return false; providerId=id; return true; }
+    public boolean verify(String id) { return control.verify(id); }
     public String validateCard(String id) { return control.validateCard(id); }
     public boolean bill(ServiceRecord record) { return control.bill(record); }
     public boolean addComments(String text) { return control.addComments(text); }
@@ -51,6 +50,6 @@ public class ProviderTerminal {
                     default: in.print("Choose one of the listed options.");
                 }
             } catch (IllegalArgumentException e) { in.print("Invalid entry: "+e.getMessage()); }
-        } } finally { providerId=null; control.logout(); }
+        } } finally { control.logout(); }
     }
 }

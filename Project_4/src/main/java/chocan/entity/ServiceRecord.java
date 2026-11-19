@@ -1,7 +1,5 @@
 package chocan.entity;
 import java.util.*;
-import java.time.*;
-import java.time.format.DateTimeFormatter;
 import java.math.BigDecimal;
 /** @author Dylan Filmer */
 public class ServiceRecord implements java.io.Serializable {
